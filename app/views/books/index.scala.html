@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+@(books : List[Book])
+
+<html>
+    <head>
+        <title>All books</title>
+    </head>
+    <body>
+        <h1>All Books</h1>
+
+        @for(book <- books){
+            <a href="">@book.title</a>
+            <p>@book.price</p>
+            <p>@book.author</p>
+        }
+    </body>
 </html>

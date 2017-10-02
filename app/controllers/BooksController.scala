@@ -2,6 +2,7 @@ package controllers
 import javax.inject._
 import play.api._
 import play.api.mvc._
+import views.books._
 
 /**
   * Created by macbook on 29/09/2017.
@@ -11,7 +12,9 @@ class BooksController @Inject()(cc: ControllerComponents) extends AbstractContro
   //get all books
 
   def index() = Action { implicit request: Request[AnyContent] =>
-    Ok("hello")
+    val allBooks = Book.allBooks
+
+    Ok(index())
   }
 
   //create a book
