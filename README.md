@@ -1,1 +1,1 @@
-today is a great day
+Today is a great day
